@@ -1,0 +1,28 @@
+.aboutUsText {
+    h1 {
+        padding-top: 1rem;
+        font-family: GochiHand;
+        text-align: center;
+        font-size: 2rem;
+    }
+
+    p {
+        font-family: GochiHand;
+        // font-weight: bold;
+        margin-top: 1.6rem;
+        padding: 0 1rem;
+        font-size: 1rem;
+
+        &::first-letter {
+            margin-left: 5rem;
+        }
+    }
+
+    .ourImg {
+        margin: 0.5rem;
+        float: right;
+        width: 15%;
+
+    }
+
+}

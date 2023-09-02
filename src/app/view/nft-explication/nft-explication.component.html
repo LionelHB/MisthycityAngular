@@ -1,1 +1,67 @@
-<p>nft-explication works!</p>
+<app-contain class="textContain">
+    <div class="nftExplicationContain">
+
+        <div class="nftExplicationText" *ngIf="currentPage === 1">
+            <h1>Comprendre les NFTs : <br>
+                L'Art du Numérique Unique</h1>
+
+            <p> Dans le monde numérique en constante évolution, les NFTs, ou Tokens Non-Fongibles, se sont élevés comme
+                une nouvelle forme de propriété numérique unique et authentique. </p>
+            <p> L'acronyme "NFT" renvoie à la notion de "non-fongible", ce qui signifie qu'un NFT est unique et ne peut
+                pas être remplacé ou échangé à un autre NFT de la même manière qu'une monnaie traditionnelle.</p>
+        </div>
+
+
+        <div class="nftExplicationText" *ngIf="currentPage === 2">
+            <p> Les NFTs sont basés sur la technologie blockchain, une infrastructure sécurisée et décentralisée qui
+                sous-tend les cryptomonnaies telles que Bitcoin et Ethereum. Cependant, contrairement aux cryptomonnaies
+                qui sont interchangeables, chaque NFT détient des informations spécifiques qui le distinguent. </p>
+            <p> En d'autres termes, un NFT représente la propriété numérique d'un actif unique et singulier, qu'il
+                s'agisse d'une œuvre d'art, d'une vidéo, d'une musique, d'un tweet, d'un GIF, ou même d'un article
+                virtuel dans un jeu.</p>
+        </div>
+
+
+        <div class="nftExplicationText" *ngIf="currentPage === 3">
+            <p>La magie des NFTs réside dans leur capacité à fournir une preuve incontestable de propriété et
+                d'authenticité pour des actifs numériques. </p>
+            <p> Chaque NFT est associé à un contrat intelligent sur la blockchain, contenant des métadonnées spécifiques
+                et des détails sur l'objet qu'il représente. </p>
+            <p> Cette information confère aux créateurs la possibilité de vérifier leur œuvre comme étant originale et à
+                l'acheteur de prouver qu'il possède le NFT légitime.</p>
+        </div>
+
+
+        <div class="nftExplicationText" *ngIf="currentPage === 4">
+            <p> L'achat et la vente de NFTs se déroulent généralement sur des places de marché en ligne spécialisées.
+                Les transactions sont enregistrées sur la blockchain, ce qui garantit la transparence et la traçabilité
+                de chaque échange. </p>
+            <p> Les artistes, créateurs et même les célébrités ont adopté les NFTs comme un moyen novateur de monétiser
+                leur travail numérique et de créer de nouvelles sources de revenus. </p>
+            <p> Les collectionneurs peuvent ainsi posséder des œuvres numériques uniques et rares, tout en soutenant les
+                créateurs qu'ils apprécient.</p>
+        </div>
+        <div class="nftExplicationText" *ngIf="currentPage === 5">
+            <p>                   En somme, les NFTs offrent une opportunité révolutionnaire de valoriser et de posséder des actifs numériques originaux dans un monde de plus en plus numérique. </p>
+            <p> Ils transcendent les frontières traditionnelles de la propriété en donnant vie à des biens numériques, ce qui ouvre des possibilités passionnantes pour la création, la collecte et la transaction d'œuvres numériques uniques et authentiques. </p>
+        </div>
+
+
+        <div class="paginationButtons">
+            <a (click)="prevPage()" [ngClass]="{'disabled': currentPage === 1}">
+                <img class="leftArrow pageArrow" src="../../../assets/design/arrow.webp" alt="Bouton Précédent">
+            </a>
+            <div class="paginationIndicator">
+                <p *ngIf="currentPage === 1">page 1</p>
+                <p *ngIf="currentPage === 2">page 2</p>
+                <p *ngIf="currentPage === 3">page 3</p>
+                <p *ngIf="currentPage === 4">page 4</p>
+            </div>
+
+            <a (click)="nextPage()" [ngClass]="{'disabled': currentPage === 5}">
+                <img class="rightArrow pageArrow" src="../../../assets/design/arrow.webp" alt="Bouton Suivant">
+            </a>
+        </div>
+
+    </div>
+</app-contain>

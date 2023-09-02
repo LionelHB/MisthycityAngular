@@ -1,9 +1,9 @@
 import { Component } from '@angular/core';
 
 @Component({
-  selector: 'ns-contain',
+  selector: 'app-contain',
   templateUrl: './contain.component.html',
-  styleUrls: ['./contain.component.css']
+  styleUrls: ['./contain.component.scss']
 })
 export class ContainComponent {
 
