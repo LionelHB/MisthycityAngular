@@ -38,22 +38,87 @@
                     }
                 }
             }
+        }
+    }
+}
 
-            .mySubCategoryButton {
-                border-radius: 15px;
-                padding: 1%;
-                background-color: $backgroundButton;
-                width: fit-content;
-                border: 2px solid black;
-                margin:0 auto;
-                a{
-                    font-size: 1.5rem;
-                    font-family: GochiHand;
-                    font-weight: bold;
-                    text-decoration: none;
-                    color: black;
-                }
-            }
+.mySubCategoryButton {
+    display: flex;
+    justify-content: center;
+
+    .animated-button1 {
+        border: 2px solid black;
+        border-radius: 15px;
+        text-decoration: none;
+        background: linear-gradient(-30deg, #acacac 50%, #c2c2c2 50%);
+        padding: 0 2%;
+        margin: 2rem;
+        display: inline-block;
+        transform: translate(0%, 0%);
+        overflow: hidden;
+        font-family: GochiHand;
+        color: #000000;
+        font-size: 1.5rem;
+        text-align: center;
+    }
+
+    .animated-button1::before {
+        border-radius: 15px;
+        content: '';
+        position: absolute;
+        top: 0px;
+        left: 0px;
+        width: 100%;
+        height: 100%;
+        background-color: #acacac;
+        opacity: 0;
+        transition: .2s opacity ease-in-out;
+    }
+
+    .animated-button1:hover::before {
+        opacity: 0.7;
+    }
+
+    .animated-button1 span {
+        position: absolute;
+    }
+
+    .animated-button1 span:nth-child(1) {
+        top: 0px;
+        left: 0px;
+        width: 100%;
+        height: 2px;
+        background: linear-gradient(to left, rgba(0, 0, 0, 0), #ffffff);
+        animation: 2s animateTop linear infinite;
+    }
+
+    @keyframes animateTop {
+        0% {
+            transform: translateX(100%);
+        }
+
+        100% {
+            transform: translateX(-100%);
+        }
+    }
+
+    .animated-button1 span:nth-child(3) {
+        border-radius: 15px;
+        bottom: 0px;
+        left: 0px;
+        width: 100%;
+        height: 2px;
+        background: linear-gradient(to right, rgba(0, 0, 0, 0), #ffffff);
+        animation: 2s animateBottom linear infinite;
+    }
+
+    @keyframes animateBottom {
+        0% {
+            transform: translateX(-100%);
+        }
+
+        100% {
+            transform: translateX(100%);
         }
     }
 }
