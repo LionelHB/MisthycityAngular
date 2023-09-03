@@ -37,7 +37,7 @@
     .imgHeader2 {
         background-image: url(../../../assets/design/design2.webp);
         background-position: center;
-      
+
 
         .bottomHeader {
             width: 100%;
@@ -73,11 +73,29 @@
             color: #A3A3A3;
 
 
+
             li {
                 font-family: GochiHand;
                 font-size: 1.3rem;
-                margin: 2rem 1rem;
+                margin: 2rem 0.5rem;
                 list-style: none;
+                .active-link {
+                    color: white; /* Couleur souhaitée pour le lien actif */
+                  }
+
+                  a {
+                    color: #A3A3A3;
+                    text-decoration: none;
+                    padding: 5px;
+    
+                    &:hover {
+                        border-radius: 15px;
+                        border-top: 1px solid white;
+                        border-bottom: 1px solid white; 
+                        border-left: none; 
+                        color: white;
+                    }
+                }
             }
         }
     }
@@ -106,6 +124,22 @@
                 font-size: 1.3rem;
                 margin: 0 1rem;
                 list-style: none;
+                a {
+                    color: #A3A3A3;
+                    text-decoration: none;
+                    padding: 5px;
+                    .active-link {
+                        color: white; 
+                      }
+    
+                    &:hover {
+                        border-radius: 15px;
+                        border-top: 1px solid white;
+                        border-bottom: 1px solid white; 
+                        border-left: none; 
+                        color: white;
+                    }
+                }
             }
         }
     }

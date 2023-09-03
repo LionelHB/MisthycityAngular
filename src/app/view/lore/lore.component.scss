@@ -1,4 +1,5 @@
 .textContain {
+    user-select: none;
     position: relative;
 
     .loreContain {
@@ -22,6 +23,12 @@
                 &::first-letter {
                     margin-left: 5rem;
                 }
+            }
+
+            .designPage4 {
+                margin: 0 auto;
+                width: 30%;
+        
             }
         }
 

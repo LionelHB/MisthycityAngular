@@ -1,0 +1,59 @@
+@import "../../../variables.scss";
+
+.subCategoryContainer {
+    user-select: none;
+
+    .subCategoryContain {
+        height: 100%;
+
+        .subCategoryList {
+            height: 100%;
+
+            h1 {
+                padding-top: 2rem;
+                font-family: GochiHand;
+                text-align: center;
+            }
+
+            .subCategoryUl {
+                height: 70%;
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+
+                ul {
+
+                    display: flex;
+                    justify-content: space-around;
+                    padding: 0;
+                    margin: 0.5rem 0;
+
+
+                    li {
+                        font-family: GochiHand;
+                        font-size: 2rem;
+                        list-style: none;
+                        margin: 0 1rem;
+
+                    }
+                }
+            }
+
+            .mySubCategoryButton {
+                border-radius: 15px;
+                padding: 1%;
+                background-color: $backgroundButton;
+                width: fit-content;
+                border: 2px solid black;
+                margin:0 auto;
+                a{
+                    font-size: 1.5rem;
+                    font-family: GochiHand;
+                    font-weight: bold;
+                    text-decoration: none;
+                    color: black;
+                }
+            }
+        }
+    }
+}

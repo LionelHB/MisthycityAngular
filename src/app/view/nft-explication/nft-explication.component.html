@@ -56,6 +56,7 @@
                 <p *ngIf="currentPage === 2">page 2</p>
                 <p *ngIf="currentPage === 3">page 3</p>
                 <p *ngIf="currentPage === 4">page 4</p>
+                <p *ngIf="currentPage === 5">page 5</p>
             </div>
 
             <a (click)="nextPage()" [ngClass]="{'disabled': currentPage === 5}">
