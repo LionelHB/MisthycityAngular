@@ -1,5 +1,7 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
+import { FormsModule } from '@angular/forms';
+
 
 import { HeaderComponent } from './shared/header/header.component'; 
 import { FooterComponent } from './shared/footer/footer.component'; 
@@ -21,6 +23,8 @@ import { HomeComponent } from './view/home/home.component';
 import { AppComponent } from './app.component';
 import { AppRoutingModule } from './app-routing.module';
 import { AccordionComponent } from './container/accordion/accordion.component';
+import { CreatureAddFormComponent } from './form/creature-add-form/creature-add-form.component';
+
 
 @NgModule({
   declarations: [
@@ -40,11 +44,13 @@ import { AccordionComponent } from './container/accordion/accordion.component';
     LoginRegisterComponent,
     NotfoundComponent,
     HomeComponent,
-    AccordionComponent
+    AccordionComponent,
+    CreatureAddFormComponent
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    FormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]

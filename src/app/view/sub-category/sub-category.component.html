@@ -1,7 +1,22 @@
 <app-contain class="subCategoryContainer">
+    <div class="formAddCreature">
+        <h1 *ngIf="showCreatureForm">Ajout d’une créature</h1>
+        <ns-creature-add-form *ngIf="showCreatureForm">
+        </ns-creature-add-form>
+        <div class="mySubCategoryButton">
+            <a (click)="toggleCreatureForm()" class="animated-button1" *ngIf="showCreatureForm">
+                <span></span>
+                <span></span>
+                <span></span>
+                <span></span>
+                retour
+            </a>
+        </div>
+    </div>
+
     <div class="subCategoryContain">
 
-        <div class="subCategoryList">
+        <div class="subCategoryList" *ngIf="!showCreatureForm">
             <h1>les créatures présentes</h1>
             <div class="subCategoryUl">
                 <ul>
@@ -26,13 +41,13 @@
                 </ul>
             </div>
             <div class="mySubCategoryButton">
-                <a routerLink="/" routerLinkActive="active-link" class="animated-button1">
+                <a (click)="toggleCreatureForm()" class="animated-button1">
                     <span></span>
                     <span></span>
                     <span></span>
                     <span></span>
                     Proposer une créature
-                  </a>
+                </a>
             </div>
         </div>
     </div>

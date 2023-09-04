@@ -1,1 +1,23 @@
-<p>creature-add-form works!</p>
+<form class="formCreatureName" (ngSubmit)="submitForm()">
+    <div class="form-group">
+      <label for="creatureName"></label>
+      <input type="text" id="creatureName" 
+      placeholder="Nom de la créature :" name="creatureName" [(ngModel)]="creatureName" class="form-control formControlInput" required>
+    </div>
+  
+    <div class="form-group">
+      <label for="creatureStory"></label>
+      <textarea id="creatureStory" placeholder="Histoire de la créature :" name="creatureStory" [(ngModel)]="creatureStory" class="form-control formControlArea" required></textarea>
+    </div>
+  
+    <div class="formAddCreatureButton">
+      <a type="submit" class="animated-button1" >
+          <span></span>
+          <span></span>
+          <span></span>
+          <span></span>
+          Proposer
+      </a>
+  </div>
+  </form>
+  
