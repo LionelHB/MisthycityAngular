@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { AppComponent } from 'src/app/app.component';
 
 @Component({
   selector: 'ns-profil',
@@ -6,5 +7,5 @@ import { Component } from '@angular/core';
   styleUrls: ['./profil.component.css']
 })
 export class ProfilComponent {
-
+ 
 }

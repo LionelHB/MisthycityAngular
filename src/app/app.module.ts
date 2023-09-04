@@ -16,9 +16,11 @@ import { ProfilComponent } from './view/profil/profil/profil.component';
 import { SocialMediasComponent } from './view/social-medias/social-medias.component';
 import { LoginRegisterComponent } from './view/login-register/login-register.component';
 import { NotfoundComponent } from './view/notfound/notfound.component';
+import { HomeComponent } from './view/home/home.component';
 
 import { AppComponent } from './app.component';
 import { AppRoutingModule } from './app-routing.module';
+import { AccordionComponent } from './container/accordion/accordion.component';
 
 @NgModule({
   declarations: [
@@ -36,7 +38,9 @@ import { AppRoutingModule } from './app-routing.module';
     ProfilComponent,
     SocialMediasComponent,
     LoginRegisterComponent,
-    NotfoundComponent
+    NotfoundComponent,
+    HomeComponent,
+    AccordionComponent
   ],
   imports: [
     BrowserModule,

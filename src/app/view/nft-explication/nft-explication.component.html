@@ -42,7 +42,7 @@
                 créateurs qu'ils apprécient.</p>
         </div>
         <div class="nftExplicationText" *ngIf="currentPage === 5">
-            <p>                   En somme, les NFTs offrent une opportunité révolutionnaire de valoriser et de posséder des actifs numériques originaux dans un monde de plus en plus numérique. </p>
+            <p>En somme, les NFTs offrent une opportunité révolutionnaire de valoriser et de posséder des actifs numériques originaux dans un monde de plus en plus numérique. </p>
             <p> Ils transcendent les frontières traditionnelles de la propriété en donnant vie à des biens numériques, ce qui ouvre des possibilités passionnantes pour la création, la collecte et la transaction d'œuvres numériques uniques et authentiques. </p>
         </div>
 
@@ -52,11 +52,7 @@
                 <img class="leftArrow pageArrow" src="../../../assets/design/arrow.webp" alt="Bouton Précédent">
             </a>
             <div class="paginationIndicator">
-                <p *ngIf="currentPage === 1">page 1</p>
-                <p *ngIf="currentPage === 2">page 2</p>
-                <p *ngIf="currentPage === 3">page 3</p>
-                <p *ngIf="currentPage === 4">page 4</p>
-                <p *ngIf="currentPage === 5">page 5</p>
+                <p>page {{currentPage}}</p>
             </div>
 
             <a (click)="nextPage()" [ngClass]="{'disabled': currentPage === 5}">

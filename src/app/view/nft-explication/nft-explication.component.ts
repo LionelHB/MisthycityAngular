@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { AppComponent } from 'src/app/app.component';
 
 @Component({
   selector: 'ns-nft-explication',
@@ -6,6 +7,7 @@ import { Component } from '@angular/core';
   styleUrls: ['./nft-explication.component.scss']
 })
 export class NftExplicationComponent {
+ 
   currentPage = 1;
 
   nextPage() {

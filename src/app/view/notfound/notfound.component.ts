@@ -7,7 +7,5 @@ import { AppComponent } from 'src/app/app.component';
   styleUrls: ['./notfound.component.scss']
 })
 export class NotfoundComponent {
-  constructor(private appComponent: AppComponent) {
-    appComponent.showHeaderAndFooter = false; 
-  }
+
 }
