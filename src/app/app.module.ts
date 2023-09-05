@@ -26,6 +26,7 @@ import { AccordionComponent } from './container/accordion/accordion.component';
 import { CreatureAddFormComponent } from './form/creature-add-form/creature-add-form.component';
 import { TextDisplayComponent } from './tools/text-display/text-display.component';
 import { RegisterFormComponent } from './form/register-form/register-form.component';
+import { SubCategoryShowComponent } from './view/sub-category/sub-category-show/sub-category-show.component';
 
 
 @NgModule({
@@ -49,7 +50,8 @@ import { RegisterFormComponent } from './form/register-form/register-form.compon
     AccordionComponent,
     CreatureAddFormComponent,
     TextDisplayComponent,
-    RegisterFormComponent
+    RegisterFormComponent,
+    SubCategoryShowComponent,
   ],
   imports: [
     BrowserModule,

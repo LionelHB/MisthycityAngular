@@ -1,5 +1,5 @@
 <div class="textInterface loreText">
-  <h1>{{ currentTextData?.title }}</h1>
+  <h1 [innerHTML]="currentTextData?.title"></h1>
   <div *ngFor="let paragraph of currentTextData?.content">
     <p>{{ paragraph }}</p>
   </div>

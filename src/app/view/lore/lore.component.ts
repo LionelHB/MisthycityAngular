@@ -9,7 +9,7 @@ import { textInterface } from '../../container/textInterface';
 export class LoreComponent {
   loreTexts: textInterface[] = [
     {
-      title: 'Les Légendes Éveillées : Une Nouvelle Ère dans la Cité',
+      title: 'Les Légendes Éveillées :<br>Une Nouvelle Ère dans la Cité',
       content: [
         'Depuis la nuit des temps, les créatures mythiques avaient vécu dans les recoins les plus secrets de notre imagination, des êtres issus de contes et de légendes. Pourtant, le jour où les portes entre leurs mondes et le nôtre se sont ouvertes, tout a changé.',
 

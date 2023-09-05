@@ -10,7 +10,7 @@ import { textInterface } from 'src/app/container/textInterface';
 export class NftExplicationComponent {
   nftTexts: textInterface[] = [
     {
-      title: 'Comprendre les NFTs : L\'Art du Numérique Unique',
+      title: 'Comprendre les NFTs : <br>L\'Art du Numérique Unique',
       content: [
         ' Dans le monde numérique en constante évolution, les NFTs, ou Tokens Non-Fongibles, se sont élevés comme une nouvelle forme de propriété numérique unique et authentique. ',
 

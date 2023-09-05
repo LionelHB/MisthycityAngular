@@ -15,6 +15,7 @@ import { SocialMediasComponent } from './view/social-medias/social-medias.compon
 import { LoginRegisterComponent } from './view/login-register/login-register.component';
 
 import { authentificationGuard } from './guard/authentification.guard';
+import { SubCategoryShowComponent } from './view/sub-category/sub-category-show/sub-category-show.component';
 
 
 
@@ -27,6 +28,7 @@ const routes: Routes = [
   { path: 'qui-suis-je', component: AboutUsComponent },
   { path: 'categories', component: CategoryComponent },
   { path: 'creatures', component: SubCategoryComponent },
+  { path: 'creature/show/creature:name', component: SubCategoryShowComponent },
   { path: 'galeries', component: GalleryComponent },
   { path: 'partenaires', component: PartnairComponent },
   { path: 'profil', component: ProfilComponent },
