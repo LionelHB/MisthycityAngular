@@ -1,5 +1,6 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations'; 
 import { FormsModule } from '@angular/forms';
 
 
@@ -7,6 +8,8 @@ import { HeaderComponent } from './shared/header/header.component';
 import { FooterComponent } from './shared/footer/footer.component'; 
 
 import { ContainComponent } from './container/contain/contain.component';
+import { AccordionComponent } from './container/accordion/accordion.component';
+
 import { LoreComponent } from './view/lore/lore.component';
 import { NftExplicationComponent } from './view/nft-explication/nft-explication.component';
 import { AboutUsComponent } from './view/about-us/about-us.component';
@@ -19,14 +22,17 @@ import { SocialMediasComponent } from './view/social-medias/social-medias.compon
 import { LoginRegisterComponent } from './view/login-register/login-register.component';
 import { NotfoundComponent } from './view/notfound/notfound.component';
 import { HomeComponent } from './view/home/home.component';
+import { SubCategoryShowComponent } from './view/sub-category/sub-category-show/sub-category-show.component';
+
+
+import { CreatureAddFormComponent } from './form/creature-add-form/creature-add-form.component';
+import { RegisterFormComponent } from './form/register-form/register-form.component';
+
+import { TextDisplayComponent } from './tools/text-display/text-display.component';
+import { StarAnimationComponent } from './tools/star-animation/star-animation.component';
 
 import { AppComponent } from './app.component';
 import { AppRoutingModule } from './app-routing.module';
-import { AccordionComponent } from './container/accordion/accordion.component';
-import { CreatureAddFormComponent } from './form/creature-add-form/creature-add-form.component';
-import { TextDisplayComponent } from './tools/text-display/text-display.component';
-import { RegisterFormComponent } from './form/register-form/register-form.component';
-import { SubCategoryShowComponent } from './view/sub-category/sub-category-show/sub-category-show.component';
 
 
 @NgModule({
@@ -52,11 +58,13 @@ import { SubCategoryShowComponent } from './view/sub-category/sub-category-show/
     TextDisplayComponent,
     RegisterFormComponent,
     SubCategoryShowComponent,
+    StarAnimationComponent,
   ],
   imports: [
+    BrowserAnimationsModule,
     BrowserModule,
     AppRoutingModule,
-    FormsModule
+    FormsModule,
   ],
   providers: [],
   bootstrap: [AppComponent]

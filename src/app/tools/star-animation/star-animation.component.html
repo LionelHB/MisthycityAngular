@@ -1,0 +1,9 @@
+<div class="star-container" (mousemove)="moveStars($event)">
+    <div
+      *ngFor="let star of stars"
+      [ngClass]="{ 'sparkle': star.isSparkling, 'rain': isRainingStars }" 
+      class="star"></div>
+  </div>
+  
+  <button (click)="triggerRain()">Déclencher la pluie d'étoiles</button>
+  
