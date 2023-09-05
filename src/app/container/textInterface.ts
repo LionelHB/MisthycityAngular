@@ -1,4 +1,5 @@
 export interface textInterface {
-    title?: string;
-    content: string[];
+    title?: string
+    content: string[]
+    image?: string
   }

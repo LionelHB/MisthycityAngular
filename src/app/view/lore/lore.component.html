@@ -1,32 +1,11 @@
 <app-contain class="textContain">
 
-    <!-- <app-machin [texts]="textInterface"></app-machin> -->
     <div class="loreContain">
+        <app-text-display [textsData]="loreTexts">
 
-        <div class="textInterface loreText">
-            <h1>{{ textInterface[currentPage - 1].title }}</h1>
-            <div *ngFor="let paragraph of textInterface[currentPage - 1]?.content">
-                <p>{{ paragraph }}</p>
-            </div>
+        </app-text-display>
 
-            <div *ngIf="currentPage === 4">
-                <img  class="designPage4" src="../../../assets/design/design3.webp">
-            </div>
 
-        </div>
-
-        <div class="paginationButtons">
-            <a (click)="prevPage()" [ngClass]="{'disabled': currentPage === 1}">
-                <img class="leftArrow pageArrow" src="../../../assets/design/arrow.webp" alt="Bouton Précédent">
-            </a>
-            <div class="paginationIndicator">
-                <p>page {{ currentPage }}</p>
-            </div>
-
-            <a (click)="nextPage()" [ngClass]="{'disabled': currentPage === 4}">
-                <img class="rightArrow pageArrow" src="../../../assets/design/arrow.webp" alt="Bouton Suivant">
-            </a>
-        </div>
 
     </div>
 </app-contain>

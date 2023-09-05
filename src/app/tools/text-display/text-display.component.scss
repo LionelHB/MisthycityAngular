@@ -1,0 +1,89 @@
+.loreText {
+  display: flex;
+  flex-direction: column;
+  margin-top: auto;
+
+  .designPage4 {
+    width: 30%;
+    margin: 10% 35%;
+
+    img {
+      border-radius: 15px;
+      width: 100%;
+      transition: all 0.5s ease-in-out;
+
+      &:hover {
+        box-shadow: 20px 30px 10px black;
+        transform: translateY(-100px) scale(3);
+      }
+
+    }
+
+  }
+
+  h1 {
+    padding-top: 1rem;
+    font-family: GochiHand;
+    text-align: center;
+  }
+
+  p {
+    font-family: GochiHand;
+    padding: 0 1rem;
+    margin-top: 2rem;
+    font-size: 1.5rem;
+
+    &::first-letter {
+      margin-left: 5rem;
+    }
+  }
+
+}
+
+.paginationButtons {
+  display: flex;
+  justify-content: space-evenly;
+
+  .leftArrow {
+    transform: scaleX(-1);
+  }
+
+  .paginationIndicator {
+    position: absolute;
+    bottom: 0;
+
+    p {
+      padding: 0;
+      margin-top: 0;
+
+
+      &::first-letter {
+        margin-left: 1rem;
+      }
+    }
+  }
+
+  .pageArrow {
+    position: absolute;
+    bottom: 1.5rem;
+
+  }
+
+  img {
+    cursor: pointer;
+    width: 2rem;
+    transition: all 0.3s ease-in-out;
+
+    &:hover {
+      scale: 1.5;
+      opacity: 0.5;
+    }
+  }
+
+  a.disabled {
+    pointer-events: none;
+    opacity: 0;
+    cursor: not-allowed;
+  }
+
+}

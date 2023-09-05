@@ -1,0 +1,22 @@
+<div class="textInterface loreText">
+  <h1>{{ currentTextData?.title }}</h1>
+  <div *ngFor="let paragraph of currentTextData?.content">
+    <p>{{ paragraph }}</p>
+  </div>
+  <div *ngIf="currentTextData.image" class="designPage4">
+    <img [src]="currentTextData.image" alt="image">
+  </div>
+</div>
+
+<div class="paginationButtons">
+  <a (click)="prevPage()" [ngClass]="{'disabled': currentPage === 1}">
+    <img class="leftArrow pageArrow" src="../../../assets/design/arrow.webp" alt="Bouton Précédent">
+  </a>
+  <div class="paginationIndicator">
+    <p>page {{ currentPage }}</p>
+  </div>
+
+  <a (click)="nextPage()" [ngClass]="{'disabled': currentPage === textsData.length}">
+    <img class="rightArrow pageArrow" src="../../../assets/design/arrow.webp" alt="Bouton Suivant">
+  </a>
+</div>

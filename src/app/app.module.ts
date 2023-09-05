@@ -24,6 +24,8 @@ import { AppComponent } from './app.component';
 import { AppRoutingModule } from './app-routing.module';
 import { AccordionComponent } from './container/accordion/accordion.component';
 import { CreatureAddFormComponent } from './form/creature-add-form/creature-add-form.component';
+import { TextDisplayComponent } from './tools/text-display/text-display.component';
+import { RegisterFormComponent } from './form/register-form/register-form.component';
 
 
 @NgModule({
@@ -45,7 +47,9 @@ import { CreatureAddFormComponent } from './form/creature-add-form/creature-add-
     NotfoundComponent,
     HomeComponent,
     AccordionComponent,
-    CreatureAddFormComponent
+    CreatureAddFormComponent,
+    TextDisplayComponent,
+    RegisterFormComponent
   ],
   imports: [
     BrowserModule,

@@ -7,7 +7,7 @@ import { textInterface } from '../../container/textInterface';
   styleUrls: ['./lore.component.scss'],
 })
 export class LoreComponent {
-  textInterface: textInterface[] = [
+  loreTexts: textInterface[] = [
     {
       title: 'Les Légendes Éveillées : Une Nouvelle Ère dans la Cité',
       content: [
@@ -36,20 +36,9 @@ export class LoreComponent {
 
         'Chaque coin de rue devenait une opportunité pour une rencontre inattendue avec une créature légendaire, où les mythes et la réalité entrelaçaient leurs histoires dans une harmonie unique.',
       ],
+      image:'../../../assets/design/design3.webp'
     },
   ];
 
-  currentPage: number = 1;
 
-  nextPage() {
-    if (this.currentPage < this.textInterface.length) {
-      this.currentPage++;
-    }
-  }
-
-  prevPage() {
-    if (this.currentPage > 1) {
-      this.currentPage--;
-    }
-  }
 }
