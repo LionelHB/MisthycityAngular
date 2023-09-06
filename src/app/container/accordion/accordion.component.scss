@@ -1,87 +1,84 @@
 @import "../../../variables.scss";
 
-.myAccordion {
-  font-family: GochiHand;
-  margin: 5rem 10%;
-  color: black;
-  --bs-accordion-active-bg: rgb(255, 255, 255);
-  --bs-accordion-bg: #D9D9D9;
-  --bs-accordion-active-color: black;
-  --bs-accordion-btn-focus-box-shadow: 0 0 0 0.25rem rgba(0, 0, 0, 0.25);
-  ;
 
-  .accordion-item {
-    border-bottom: 2px black solid;
-    width: 20%;
+.formCategoriesButton {
+  display: flex;
+  justify-content: center;
+
+  .animated-button1 {
+    width: 70%;
+    border: 2px solid black;
     border-radius: 15px;
+    text-decoration: none;
+    background: linear-gradient(-30deg, #acacac 50%, #c2c2c2 50%);
+    padding: 0 1rem;
+    margin: 0;
+    display: inline-block;
+    transform: translate(0%, 0%);
+    overflow: hidden;
+    font-family: GochiHand;
+    color: #000000;
+    font-size: 1.5rem;
+    text-align: center;
+  }
 
-    .accordion-header {
-      width: 500%;
-      border-radius: 15px;
+  .animated-button1::before {
+    border-radius: 15px;
+    content: '';
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    width: 100%;
+    height: 100%;
+    background-color: #acacac;
+    opacity: 0;
+    transition: .2s opacity ease-in-out;
+  }
+
+  .animated-button1:hover::before {
+    opacity: 0.7;
+  }
+
+  .animated-button1 span {
+    position: absolute;
+  }
+
+  .animated-button1 span:nth-child(1) {
+    top: 0px;
+    left: 0px;
+    width: 100%;
+    height: 2px;
+    background: linear-gradient(to left, rgba(0, 0, 0, 0), #ffffff);
+    animation: 2s animateTop linear infinite;
+  }
+
+  @keyframes animateTop {
+    0% {
+      transform: translateX(100%);
     }
 
-    .accordion-button {
-      position: relative;
-      display: block;
-
-      a {
-        right: -4.5rem;
-        width: 10%;
-        text-decoration: none;
-        position: absolute;
-        color: #000;
-        font-weight: bold;
-
-        img {
-          width: 70%;
-
-          &:hover {
-            scale: 1.2;
-            opacity: 0.5;
-          }
-        }
-      }
-
-      font-size: 1.5rem;
-      border-radius: 15px;
-      transition: all 2s ease-in-out;
-
-      &:hover {
-        background-color: rgba(99, 137, 153, 1);
-      }
+    100% {
+      transform: translateX(-100%);
     }
   }
 
+  .animated-button1 span:nth-child(3) {
+    border-radius: 15px;
+    bottom: 0px;
+    left: 0px;
+    width: 100%;
+    height: 2px;
+    background: linear-gradient(to right, rgba(0, 0, 0, 0), #ffffff);
+    animation: 2s animateBottom linear infinite;
+  }
 
-  .accordion-collapse {
-    ul {
-      margin: 0;
-      padding: 0;
-
-      a {
-        color: #000000;
-        text-decoration: none;
-
-        &:hover {
-          border-radius: 15px;
-          border-top: 1px solid white;
-          border-bottom: 1px solid white;
-          border-left: none;
-          color: white;
-        }
-
-        li {
-          list-style: none;
-          text-align: center;
-        }
-      }
+  @keyframes animateBottom {
+    0% {
+      transform: translateX(-100%);
     }
-.accordion-body{
-  padding: 0;
- 
-}
-    .arrowToSubCategory {
-      width: 1rem;
+
+    100% {
+      transform: translateX(100%);
     }
   }
 }
