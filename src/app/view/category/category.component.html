@@ -1,8 +1,14 @@
 <app-contain>
-   <div class="categoryTitle">
-      <h1>De quoi parle t-on ? <br> les catégories du site</h1>
-   </div>
-   <app-accordion>
+    <div class="categoryTitle">
+       <h1>De quoi parle t-on ? <br> les catégories du site</h1>
+    </div>
+    <div *ngFor="let categoryItem of categories">
+      <app-accordion [category]="categoryItem"></app-accordion>
+    </div>
+    
+    
+    
 
-   </app-accordion>
-</app-contain>
+
+ </app-contain>
+  
