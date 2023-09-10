@@ -28,7 +28,7 @@ const routes: Routes = [
   { path: 'qui-suis-je', component: AboutUsComponent },
   { path: 'categories', component: CategoryComponent },
   { path: 'creatures', component: SubCategoryComponent },
-  { path: 'creature/show/creature:name', component: SubCategoryShowComponent },
+  { path: 'creature/show/:name', component: SubCategoryShowComponent },
   { path: 'galeries', component: GalleryComponent },
   { path: 'partenaires', component: PartnairComponent },
   { path: 'profil', component: ProfilComponent },

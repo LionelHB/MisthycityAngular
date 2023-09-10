@@ -1,4 +1,4 @@
-@import "../../../variables.scss";
+@import "../../variables.scss";
 
 
 .formCreatureName {
@@ -19,7 +19,7 @@
 
 
       &::placeholder {
-        font-family: GochiHand;
+        font-family: merrycle2;
         color: black;
       }
 
@@ -60,7 +60,7 @@
     display: inline-block;
     transform: translate(0%, 0%);
     overflow: hidden;
-    font-family: GochiHand;
+    font-family: merrycle2;
     color: #000000;
     font-size: 1.5rem;
     text-align: center;

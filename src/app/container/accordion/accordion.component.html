@@ -1,9 +1,25 @@
-<div class="formCategoriesButton">
-    <a type="submit" class="animated-button1">
-        <span></span>
-        <span></span>
-        <span></span>
-        <span></span>
-        {{ category.name }}
+<div class="accordion">
+  <div class="formCategoriesButton">
+    <a class="animated-button1" (click)="toggleAccordion(category)">
+      <span></span>
+      <span></span>
+      <span></span>
+      <span></span>
+      {{ category.name }}
     </a>
+  </div>
+
+  <div [@slideInOut]="state" class="collapseAccordion formCategoriesButton" *ngIf="category.isExpanded">
+    <ul>
+      <li *ngFor="let subCategory of category.subCategory" class="animated-button1">
+        <a [routerLink]="['/creature/show', 'creature', subCategory.name]" routerLinkActive="active-link">
+          <span></span>
+          <span></span>
+          <span></span>
+          <span></span>
+          {{ subCategory.name }}
+        </a>
+      </li>
+    </ul>
+  </div>
 </div>
