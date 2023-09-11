@@ -26,7 +26,7 @@ import { HomeComponent } from './view/home/home.component';
 import { SubCategoryShowComponent } from './view/sub-category/sub-category-show/sub-category-show.component';
 
 
-import { CreatureAddFormComponent } from './form/creature-add-form/creature-add-form.component';
+import { CreatureAddFormComponent } from './creature-add-form/creature-add-form.component';
 import { RegisterFormComponent } from './form/register-form/register-form.component';
 
 import { TextDisplayComponent } from './tools/text-display/text-display.component';
@@ -34,6 +34,7 @@ import { StarAnimationComponent } from './tools/star-animation/star-animation.co
 
 import { AppComponent } from './app.component';
 import { AppRoutingModule } from './app-routing.module';
+import { CategoryService, CategorySubService } from './services/category.service';
 
 
 
@@ -74,7 +75,7 @@ import { AppRoutingModule } from './app-routing.module';
     HttpClientModule
    
   ],
-  providers: [],
+  providers: [CategoryService, CategorySubService],
   bootstrap: [AppComponent], 
   
 })

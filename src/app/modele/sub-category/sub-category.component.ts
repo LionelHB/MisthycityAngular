@@ -1,7 +1,10 @@
+import { Component } from '@angular/core';
 
-export interface SubCategoryModel {
-  id: number;
-  name: string;
-  description: string;
-  
+@Component({
+  selector: 'ns-sub-category',
+  templateUrl: './sub-category.component.html',
+  styleUrls: ['./sub-category.component.css']
+})
+export class SubCategoryComponent {
+
 }

@@ -1,10 +1,16 @@
 <app-contain>
-   <div class="categoryTitle">
-     <h1>De quoi parle-t-on ? <br> les catégories du site</h1>
-   </div>
- 
-   <app-accordion *ngFor="let category of categories" [category]="category">
-     {{ category.name }}
-   </app-accordion>
- </app-contain>
- 
+  <div class="categoryTitle">
+    <h1>De quoi parle-t-on ? <br> les catégories du site</h1>
+  </div>
+
+  <app-accordion *ngFor="let category of categories" [category]="category" [categories]="categories">    
+
+    <div *ngIf="category.isExpanded">
+      <ul>
+        <li *ngFor="let subCategory of category.subCategory">
+          {{ subCategory.name }}
+        </li>
+      </ul>
+    </div>
+  </app-accordion>
+</app-contain>
