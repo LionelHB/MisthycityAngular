@@ -1,7 +1,7 @@
 import { HttpResponse } from '@angular/common/http';
 import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
-import { SubCategoryModel } from '../../../modele/sub-category/sub-category.component'; // Remplacez par le chemin correct
+import { SubCategoryModel } from 'src/app/modele/sub-category/sub-category.component';
 import { SubCategoryService } from 'src/app/services/category.service';
 
 @Component({
