@@ -3,8 +3,7 @@
     <h1>De quoi parle-t-on ? <br> les catégories du site</h1>
   </div>
 
-  <app-accordion *ngFor="let category of categories" [category]="category" [categories]="categories">    
-
+  <app-accordion *ngFor="let category of categories" [category]="category" [categories]="categories">
     <div *ngIf="category.isExpanded">
       <ul>
         <li *ngFor="let subCategory of category.subCategory">

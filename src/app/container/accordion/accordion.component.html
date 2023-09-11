@@ -1,4 +1,5 @@
 <div class="accordion">
+
   <div class="formCategoriesButton">
     <a class="animated-button1" (click)="toggleAccordion(category)">
       <span></span>
@@ -7,6 +8,8 @@
       <span></span>
       {{ category.name }}
     </a>
+    <a routerLink="/" routerLinkActive="active-link"><img class="arrowToCategoryShow"
+        src="../../../assets/design/arrow.webp" alt="Bouton ToCategory"></a>
   </div>
 
   <div [@slideInOut]="state" class="collapseAccordion formCategoriesButton" *ngIf="category.isExpanded">

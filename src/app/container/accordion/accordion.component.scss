@@ -10,6 +10,18 @@
     display: flex;
     justify-content: center;
 
+    .arrowToCategoryShow {
+      cursor: pointer;
+      height: 1rem;
+      margin: auto 1rem;
+      transition: all 0.3s ease-in-out;
+
+      &:hover {
+        scale: 1.5;
+        opacity: 0.5;
+      }
+    }
+
     .animated-button1 {
       cursor: pointer;
       width: 100%;
@@ -105,9 +117,10 @@
         a {
           text-decoration: none;
           color: #000000;
+
           &:hover {
-    
-            color:antiquewhite;
+
+            color: antiquewhite;
           }
         }
       }
