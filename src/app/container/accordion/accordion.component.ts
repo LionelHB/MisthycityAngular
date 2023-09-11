@@ -21,6 +21,5 @@ export class AccordionComponent {
       }
     });
     categoryToToggle.isExpanded = !categoryToToggle.isExpanded;
-    console.log(`Category ${categoryToToggle.name} is expanded: ${categoryToToggle.isExpanded}`);
   }
 }

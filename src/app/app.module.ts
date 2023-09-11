@@ -34,7 +34,7 @@ import { StarAnimationComponent } from './tools/star-animation/star-animation.co
 
 import { AppComponent } from './app.component';
 import { AppRoutingModule } from './app-routing.module';
-import { CategoryService, CategorySubService } from './services/category.service';
+import { CategoryService, SubCategoryService } from './services/category.service';
 
 
 
@@ -75,7 +75,7 @@ import { CategoryService, CategorySubService } from './services/category.service
     HttpClientModule
    
   ],
-  providers: [CategoryService, CategorySubService],
+  providers: [CategoryService, SubCategoryService],
   bootstrap: [AppComponent], 
   
 })

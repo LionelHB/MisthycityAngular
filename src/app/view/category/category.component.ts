@@ -1,9 +1,9 @@
 import { HttpClient } from '@angular/common/http';
 import { Component, Input, OnInit } from '@angular/core';
 
-import { ActivatedRoute } from '@angular/router';
+import { ActivatedRoute, Router } from '@angular/router';
 import { CategoryModel } from 'src/app/modele/category/category.component';
-import { CategoryService } from 'src/app/services/category.service';
+import { CategoryService, SubCategoryService } from 'src/app/services/category.service';
 
 
 @Component({
@@ -21,23 +21,27 @@ export class CategoryComponent implements OnInit {
   constructor(
     private http: HttpClient,
     private categoryService: CategoryService,
-    private route: ActivatedRoute
+    private subCategoryService: SubCategoryService,
+    private route: ActivatedRoute,
+    private router: Router
   ) { }
 
   ngOnInit() {
     this.http
-      .get<CategoryModel[]>('http://localhost:8000/api/categories?page=1', {
+      .get<CategoryModel[]>('http://localhost:8000/api/categories', {
         headers: { 'accept': 'application/json' },
+        
       })
       .subscribe((data) => {
         this.categories = data;
         this.categories.forEach((category) => {
           category.isExpanded = false;
-
-
         });
-        console.log('Categories:', this.categories);
+        
       });
-
+      this.subCategoryService.getAll().subscribe((subCategoryData) => {
+        const subCategory = subCategoryData[0]; 
+        this.router.navigate(['/creature/show', subCategory.name]);
+      });
   }
 }

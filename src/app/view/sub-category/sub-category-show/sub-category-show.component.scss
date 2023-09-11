@@ -1,0 +1,22 @@
+.subCategoryPage {
+    font-family: merrycle2;
+
+    h1 {
+        padding-top: 2rem;
+        text-align: center;
+        font-size: 4rem;
+        margin: 0;
+
+    }
+
+    p {
+        margin: 0;
+        font-size: 1.3rem;
+        padding: 2rem;
+
+        &::first-letter {
+            margin-left: 3rem;
+            font-size: 2rem;
+        }
+    }
+}

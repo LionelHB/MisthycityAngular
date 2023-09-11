@@ -12,7 +12,7 @@
   <div [@slideInOut]="state" class="collapseAccordion formCategoriesButton" *ngIf="category.isExpanded">
     <ul>
       <li *ngFor="let subCategory of category.subCategory" class="animated-button1">
-        <a [routerLink]="['/creature/show', 'creature', subCategory.name]" routerLinkActive="active-link">
+        <a [routerLink]="['/creature/show', subCategory.name]" routerLinkActive="active-link">
           <span></span>
           <span></span>
           <span></span>
