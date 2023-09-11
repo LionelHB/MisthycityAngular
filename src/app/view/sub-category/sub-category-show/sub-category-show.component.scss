@@ -1,4 +1,6 @@
 .subCategoryPage {
+    position: relative;
+    height: 100%;
     font-family: merrycle2;
 
     h1 {
@@ -17,6 +19,35 @@
         &::first-letter {
             margin-left: 3rem;
             font-size: 2rem;
+        }
+    }
+
+
+    .btnArrows {
+        position: absolute;
+        bottom: 1rem;
+        left: 2rem;
+        display: flex;
+        flex-direction: column;
+        a{
+            text-decoration: none;
+            color: black;
+            font-size: 1.5rem;
+            transition: all 0.3s ease-in-out;
+        }
+        .btnBack {
+            &:hover {
+                scale: 1.2;
+                opacity: 0.4;
+            }
+            img {
+               margin-right: 1rem;
+                cursor: pointer;
+                width: 2rem;
+        
+                transform: rotateY(180deg);
+
+            }
         }
     }
 }
