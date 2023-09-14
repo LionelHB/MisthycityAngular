@@ -1,1 +1,17 @@
-<p>gallery works!</p>
+<app-contain>
+    <div class="galleryTitle">
+        <h1>Les galeries du site</h1>
+      </div>
+
+<div class="galleryList">
+    <h2>Les dernières galeries ouvertes :</h2>
+</div>
+
+<div *ngFor="let gallery of galleries">
+  <h2>{{ gallery.name }}</h2>
+  <p>{{ gallery.description }}</p>
+  <!-- Ajoutez d'autres éléments HTML pour afficher d'autres propriétés de la galerie -->
+</div>
+
+
+  </app-contain>

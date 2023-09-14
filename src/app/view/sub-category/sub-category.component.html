@@ -19,51 +19,23 @@
         <div class="subCategoryList" *ngIf="!showCreatureForm">
             <h1>Les créatures présentes</h1>
             <div class="subCategoryUl">
-                <ul>
-                    <a href="">
-                        <li>Licornes</li>
-                    </a>
-                    <a href="">
-                        <li>Elfes</li>
-                    </a>
-                    <a href="">
-                        <li>Satyres</li>
-                    </a>
-                </ul>
-                <ul>
-                    <a href="">
-                        <li>Sirènes</li>
-                    </a>
-                    <a href="">
-                        <li>Trolls</li>
-                    </a>
-                    <a href="">
-                        <li>Dryades</li>
-                    </a>
-                </ul>
-                <ul>
-                    <a href="">
-                        <li>Dragons</li>
-                    </a>
-                    <a href="">
-                        <li>Krakens</li>
-                    </a>
-                    <a href="">
-                        <li>Minotaures</li>
-                    </a>
-                </ul>
-                <ul>
-                    <a href="">
-                        <li>Cyclopes</li>
-                    </a>
-                    <a href="">
-                        <li>Fées</li>
-                    </a>
-                    <a href="">
-                        <li>Harpies</li>
-                    </a>
-                </ul>
+                <div *ngFor="let group of groupedSubCategories">
+                    <ul>
+                        <li *ngFor="let subCategory of group" class="animated-button1">
+                            <a [routerLink]="['/creature/show', subCategory.name]" routerLinkActive="active-link">
+                                <span></span>
+                                <span></span>
+                                <span></span>
+                                <span></span>
+                                {{ subCategory.name }}
+                            </a>
+                        </li>
+                    </ul>
+                </div>
             </div>
+
+
+
             <div class="mySubCategoryButton">
                 <a (click)="toggleCreatureForm()" class="animated-button1">
                     <span></span>
