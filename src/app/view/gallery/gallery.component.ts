@@ -1,25 +1,27 @@
-import { HttpClient } from '@angular/common/http';
 import { Component, OnInit } from '@angular/core';
-import { Router } from '@angular/router';
 import { GalleryModel } from 'src/app/modele/gallery/gallery';
+import { GalleryService } from 'src/app/services/gallery.service';
+import { UserService } from 'src/app/services/user.service';
 
 @Component({
-  selector: 'ns-gallery',
+  selector: 'app-gallery',
   templateUrl: './gallery.component.html',
-  styleUrls: ['./gallery.component.scss']
+  styleUrls: ['./gallery.component.scss'],
 })
 export class GalleryComponent implements OnInit {
-  galleries: GalleryModel[] = [];
+  galleries: GalleryModel[] | undefined;
 
+  constructor(
+    private galleryService: GalleryService,
+    private userService: UserService
+  ) { }
 
-  constructor(private http: HttpClient) {
-    this.galleries = [];
-  }
-
-  ngOnInit(): void {
-    this.http.get<any>('http://127.0.0.1:8000/api/galleries').subscribe(data => {
-      this.galleries = data['hydra:member'];
-      console.log(this.galleries);
-    });
+  async ngOnInit(): Promise<void> {
+    try {
+      this.galleries = await this.galleryService.getGalleries().toPromise();
+      console.log('Galleries:', this.galleries);
+    } catch (error) {
+      console.error('Error loading galleries:', error);
+    }
   }
 }
