@@ -1,8 +1,142 @@
-.galleryTitle {
-    margin-bottom: 3rem;
+.galleryList {
+    margin-bottom: 1rem;
+
     h1 {
-        padding-top: 2rem;
+        padding-top: 1rem;
         text-align: center;
         font-family: merrycle2;
     }
 }
+
+.bgCards {
+    text-align: start;
+    font-family: merrycle2;
+    background-color: #D9D9D9;
+    padding: 2%;
+    width: 95%;
+    border-radius: 20px;
+
+    
+    .myCards {
+        text-align: center;
+        width: 70%;
+        background-color: transparent;
+        border: none;
+        
+        h5 {
+            font-weight: bold;
+        }
+        
+        a {
+            display: inline-block; /* Pour que le <a> s'adapte à la taille de l'image */
+        }
+        
+        img {
+            max-width: 100%; /* L'image s'adaptera à la largeur maximale du conteneur parent */
+            border-radius: 20px;
+            box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.582);
+    
+            &:hover {
+                scale: 1.2;
+                z-index: 9;
+            }
+        }
+    }
+}
+.myImageLink {
+    display: inline-block;
+    text-decoration: none; 
+    color: inherit; 
+    
+    img{
+        height: fit-content;
+    }
+}
+
+
+.myPaginationButton{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+ 
+}
+
+.disabled{
+    opacity: 0.3;
+}
+    .animated-button1 {
+        cursor: pointer;
+        border: 2px solid black;
+        border-radius: 15px;
+        text-decoration: none;
+        background: linear-gradient(-30deg, #acacac 50%, #c2c2c2 50%);
+        padding: 0 2%;
+        margin: 2rem;
+        display: inline-block;
+        transform: translate(0%, 0%);
+        overflow: hidden;
+        font-family: merrycle2;
+        color: #000000;
+        font-size: 1.5rem;
+        text-align: center;
+    }
+
+    .animated-button1::before {
+        border-radius: 15px;
+        content: '';
+        position: absolute;
+        top: 0px;
+        left: 0px;
+        width: 100%;
+        height: 100%;
+        background-color: #acacac;
+        opacity: 0;
+        transition: .2s opacity ease-in-out;
+    }
+
+    .animated-button1:hover::before {
+        opacity: 0.7;
+    }
+
+    .animated-button1 span {
+        position: absolute;
+    }
+
+    .animated-button1 span:nth-child(1) {
+        top: 0px;
+        left: 0px;
+        width: 100%;
+        height: 2px;
+        background: linear-gradient(to left, rgba(0, 0, 0, 0), #ffffff);
+        animation: 2s animateTop linear infinite;
+    }
+
+    @keyframes animateTop {
+        0% {
+            transform: translateX(100%);
+        }
+
+        100% {
+            transform: translateX(-100%);
+        }
+    }
+
+    .animated-button1 span:nth-child(3) {
+        border-radius: 15px;
+        bottom: 0px;
+        left: 0px;
+        width: 100%;
+        height: 2px;
+        background: linear-gradient(to right, rgba(0, 0, 0, 0), #ffffff);
+        animation: 2s animateBottom linear infinite;
+    }
+
+    @keyframes animateBottom {
+        0% {
+            transform: translateX(-100%);
+        }
+
+        100% {
+            transform: translateX(100%);
+        }
+    }

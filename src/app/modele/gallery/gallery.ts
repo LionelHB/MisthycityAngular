@@ -1,22 +1,15 @@
+import { NftModel } from "../nft/nft.component";
+
 export interface GalleryModel {
   id: number;
-  owner_id: number;
+  owner: {
+    id: number;
+    username: string;
+    nft: NftModel[]; 
+  };
   name: string;
   is_public: boolean;
   description: string;
-  creation_date: Date;
+  creationDate: Date;
 }
 
-
-
-
-
-
-// async ngOnInit(): Promise<void> {
-//   try {
-//     this.galleries = await this.galleryService.getGalleries().toPromise();
-//     console.log('Galleries:', this.galleries); 
-//   } catch (error) {
-//     console.error('Error loading galleries:', error);
-//   }
-// }

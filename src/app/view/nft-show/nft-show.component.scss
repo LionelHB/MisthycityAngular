@@ -1,0 +1,161 @@
+.nftShowPage {
+    margin-bottom: 1rem;
+
+    h1 {
+        padding-top: 1rem;
+        text-align: center;
+        font-family: merrycle2;
+    }
+
+    h3 {
+        padding-top: 1rem;
+        text-align: center;
+        font-family: merrycle2;
+    }
+}
+
+
+.bgNft {
+    text-align: start;
+    font-family: merrycle2;
+    background-color: #D9D9D9;
+    padding: 2%;
+    width: 95%;
+    margin: 0;
+    border-radius: 20px;
+
+    .myCards {
+        margin: 0;
+        display: flex;
+        align-items: flex-start;
+        justify-content: space-between;
+        text-align: center;
+        width: 100%;
+        background-color: transparent;
+        border: none;
+
+        h5 {
+            font-weight: bold;
+        }
+
+        a {
+            display: inline-block;
+        }
+
+        img {
+            width: 30%;
+            border-radius: 20px;
+            box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.582);
+            margin: 0;
+            cursor: pointer;
+
+            &:hover {
+                scale: 1.2;
+                z-index: 9;
+            }
+        }
+
+        .nftValue {
+            display: flex;
+            justify-content: space-between;
+
+            .nftTitle {
+                text-align: left;
+            }
+
+            p {
+                font-size: 1.2rem;
+
+                &:last-child {
+                    margin-bottom: 0;
+                }
+            }
+        }
+
+
+    }
+
+    .nftDetails {
+        display: flex;
+        justify-content: space-between;
+
+        .detailsRight {
+            text-align: right;
+        }
+
+        h2 {
+            font-size: 1.5rem;
+        }
+    }
+
+    .nftDescription {
+        p {
+            margin-bottom: 0;
+            font-size: 1.1rem;
+
+            &::first-letter {
+                margin-left: 3rem;
+            }
+        }
+    }
+}
+
+/* Styles pour l'overlay */
+.overlay {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.7);
+    z-index: 9999;
+
+
+    .overlay-content {
+        position: relative;
+        // width: 90%;
+        height: 90%;
+        overflow: auto;
+
+        img {
+            height: 100%;
+            width: 100%;
+            cursor:default;
+          
+
+            &:hover {
+                scale: 1;
+                z-index: 9;
+            }
+        }
+    }
+}
+
+.closeOverlayButton {
+    font-family: arial;
+    background-color: #D9D9D9;
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    font-size: 3rem;
+    padding: 0.1rem;
+    cursor: pointer;
+
+ 
+    .overlayClose{
+        box-shadow: inset 0 0 0 3px black;
+        height: fit-content;
+        margin: 0;
+        height: min-content;
+        width: fit-content;
+        line-height: 0.8;
+        transition: all 0.5s ease-in-out; 
+        &:hover{
+            color: #D9D9D9;
+            background-color: rgb(151, 9, 9);;
+        }
+    }
+}

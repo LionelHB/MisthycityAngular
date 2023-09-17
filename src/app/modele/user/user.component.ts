@@ -1,3 +1,6 @@
+import { NftModel } from "../nft/nft.component";
+
+
 export interface UserModel {
   id: number;
   email: string;
@@ -7,5 +10,5 @@ export interface UserModel {
   username: string;
   is_man: boolean;
   birthday_date: Date;
-
+  nfts: NftModel[];
 }

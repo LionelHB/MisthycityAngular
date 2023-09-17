@@ -16,6 +16,12 @@ import { LoginRegisterComponent } from './view/login-register/login-register.com
 
 import { authentificationGuard } from './guard/authentification.guard';
 import { SubCategoryShowComponent } from './view/sub-category/sub-category-show/sub-category-show.component';
+import { NftShowComponent } from './view/nft-show/nft-show.component';
+import { GalleryShowComponent } from './view/gallery/galleryShow/gallery-show/gallery-show.component';
+import { ProfilGalleryComponent } from './view/profil/profil-gallery/profil-gallery.component';
+import { ProfilGalleryNewComponent } from './view/profil/profil-gallery-new/profil-gallery-new.component';
+import { ProfilUserNftComponent } from './view/profil/profil-user-nft/profil-user-nft.component';
+import { ProfilUserNftAdministerComponent } from './view/profil/profil-user-nft-administer/profil-user-nft-administer.component';
 
 
 
@@ -32,8 +38,15 @@ const routes: Routes = [
   { path: 'galeries', component: GalleryComponent },
   { path: 'partenaires', component: PartnairComponent },
   { path: 'profil', component: ProfilComponent },
+  { path: 'profil/mes-galeries', component: ProfilGalleryComponent },
+  { path: 'profil/nouvelle-galerie', component: ProfilGalleryNewComponent },
+  { path: 'profil/gerer-ajouter-nft', component: ProfilUserNftComponent },
+  { path: 'profil/modifier-nft', component: ProfilUserNftAdministerComponent },
   { path: 'reseaux-sociaux', component: SocialMediasComponent },
   { path: 'connexion-inscription', component: LoginRegisterComponent },
+  { path: 'nft/show/:name', component: NftShowComponent },
+  { path: 'galerie/show/:name', component: GalleryShowComponent },
+
 
   { path: 'not-found', component: NotfoundComponent },
   { path: '**', redirectTo: 'not-found' },

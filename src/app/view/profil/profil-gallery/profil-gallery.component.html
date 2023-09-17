@@ -1,1 +1,84 @@
-<p>profil-gallery works!</p>
+<app-contain>
+    <div class="modifyGalleryPage">
+        <div class="galleryList">
+            <h1>Mes galeries</h1>
+        </div>
+        <div class="row mx-auto bgCards">
+            <h3>Les dragons de JeanMiche</h3>
+            <div class="col-4 mb-4">
+                <div class="card myCards mx-auto">
+                    <img src="../../../assets/design/sansnft.webp" alt="No NFT Image">
+                    <div class="modifyGalleryButton">
+                        <a type="submit" class="animated-button1">
+                            <span></span>
+                            <span></span>
+                            <span></span>
+                            <span></span>
+                            Modifier
+                        </a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-4 mb-4">
+                <div class="card myCards mx-auto">
+                    <img src="../../../assets/design/sansnft.webp" alt="No NFT Image">
+                    <div class="modifyGalleryButton">
+                        <a type="submit" class="animated-button1">
+                            <span></span>
+                            <span></span>
+                            <span></span>
+                            <span></span>
+                            Modifier
+                        </a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-4 mb-4">
+                <div class="card myCards mx-auto">
+                    <img src="../../../assets/design/sansnft.webp" alt="No NFT Image">
+                    <div class="modifyGalleryButton">
+                        <a type="submit" class="animated-button1">
+                            <span></span>
+                            <span></span>
+                            <span></span>
+                            <span></span>
+                            Modifier
+                        </a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-4 mb-4">
+                <div class="card myCards mx-auto">
+                    <img src="../../../assets/design/sansnft.webp" alt="No NFT Image">
+                    <div class="modifyGalleryButton">
+                        <a type="submit" class="animated-button1">
+                            <span></span>
+                            <span></span>
+                            <span></span>
+                            <span></span>
+                            Modifier
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+        <div class="modifyGalleryButton">
+            <a [routerLink]="['/profil/nouvelle-galerie']" class="animated-button1">
+                <span></span>
+                <span></span>
+                <span></span>
+                <span></span>
+                Nouvelle galerie
+            </a>
+        </div>
+
+        <div class="btnArrows">
+            <a class="backToGallery btnBack" routerLink="/profil" routerLinkActive="active-link">
+                <img class="arrowToCreatures" src="../../../assets/design/arrow.webp" alt="Bouton retour"> retour : profil
+            </a>
+        </div>
+    </div>
+
+</app-contain>

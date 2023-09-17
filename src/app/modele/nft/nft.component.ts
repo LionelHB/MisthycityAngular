@@ -1,3 +1,7 @@
+import { AnthologyModel } from "../anthology/anthology";
+import { SubCategoryModel } from "../sub-category/sub-category.component";
+import { UserModel } from "../user/user.component";
+
 export class NftModel {
   constructor(
     public id: number,
@@ -14,11 +18,11 @@ export class NftModel {
     public view: number,
     public likes: number,
     public favoris: number,
-    private description: string,
+    public description: string,
   
 
-    // public dubCategory: SubCategoryModel[],
-    // public anthology: AnthologyModel[],
-    // public owner: UserModel[],
+    public subCategory: SubCategoryModel[],
+    public anthology: AnthologyModel[],
+    public owner: UserModel[],
   ) { }
 }

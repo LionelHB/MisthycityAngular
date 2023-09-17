@@ -1,8 +1,8 @@
 import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
 import { Observable } from 'rxjs';
-import { UserModel } from '../modele/user/user.component';
 import { GalleryModel } from '../modele/gallery/gallery';
+import { NftModel } from '../modele/nft/nft.component';
 
 @Injectable({
   providedIn: 'root',
@@ -21,13 +21,6 @@ export class GalleryService {
       headers: { 'accept': 'application/json' },
     });
   }
-  transformGalleryData(data: any[]): GalleryModel[] {
-    return data.map((item: any) => {
-      if (item.owner && item.owner.username) {
-        item.owner.email = item.owner.username;
-        delete item.owner.username; // Supprimer le champ "username" si nécessaire
-      }
-      return item;
-    });
-  }
+
 }
+

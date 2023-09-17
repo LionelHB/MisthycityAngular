@@ -1,1 +1,46 @@
-<p>profil-user-nft works!</p>
+<app-contain>
+
+    <div class="myNftPage">
+        <div class="myNftTitle">
+            <h1>Mes Nfts</h1>
+        </div>
+
+        <div class="row mx-auto bgMyNft">
+            <div class="col-4 mb-4">
+                <div class="card myCards mx-auto">
+                    <img src="assets/design/sansnft.webp" alt="No NFT Image">
+                    <div class="iconNftManage">
+                        <a [routerLink]="['/profil/modifier-nft']" class="image-link"> <img
+                                src="assets/design/parametre.png" alt="No NFT Image"></a>
+                        <img src="assets/design/delete.png" alt="No NFT Image" (click)="openDeleteConfirmationModal()">
+                    </div>
+                </div>
+            </div>
+            <div class="col-4 mb-4">
+                <div class="card myCards mx-auto">
+                    <img src="assets/design/sansnft.webp" alt="No NFT Image">
+                    <div class="iconNftManage">
+                        <a [routerLink]="['/profil/modifier-nft']" class="image-link">
+                            <img src="assets/design/parametre.png" alt="No NFT Image"></a>
+                        <img src="assets/design/delete.png" alt="No NFT Image" (click)="openDeleteConfirmationModal()">
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="myNftButton">
+            <a type="submit" class="animated-button1">
+                <span></span>
+                <span></span>
+                <span></span>
+                <span></span>
+                Ajouter nft
+            </a>
+        </div>
+
+    </div>
+
+
+
+
+</app-contain>

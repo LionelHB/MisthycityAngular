@@ -15,6 +15,10 @@ export class UserService {
     return this.http.get<UserModel>(`/api/users/${Id}`);
    
   }
+  getUserByUsername(username: string): Observable<UserModel> {
+    const url = `${this.baseUrl}?username=${username}`;
+    return this.http.get<UserModel>(url);
+  }
 }
 
 

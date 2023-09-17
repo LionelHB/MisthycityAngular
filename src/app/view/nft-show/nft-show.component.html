@@ -1,1 +1,61 @@
-<p>nft-show works!</p>
+<app-contain>
+    <div class="nftShowPage">
+        <h1> nft : Dragon vénère</h1>
+    </div>
+
+    <div class="bgNft mx-auto">
+        <div class="mb-4">
+            <div class="myCards">
+                <img (click)="openOverlay()" src="../../../assets/nft/creaturesDangereuses/dragon/dragon8.webp"
+                    alt="No NFT Image">
+                <div>
+
+                    <div *ngIf="isOverlayOpen" class="overlay">
+                        <div class="overlay-content">
+
+                            <img src="../../../assets/nft/creaturesDangereuses/dragon/dragon8.webp" alt="No NFT Image">
+                            <div class="closeOverlayButton">
+                                <p class="overlayClose" (click)="closeOverlay()">X</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="nftValue">
+                        <div class="nftTitle">
+                            <h5>Prix : </h5>
+                            <h5>Créateur : GraphicAnto</h5>
+                        </div>
+
+                        <div class="valueDevise">
+                            <p>1.73 ETH</p>
+                            <p>1 528,94 EUR</p>
+                        </div>
+                    </div>
+                    <app-graph>
+                    </app-graph>
+                </div>
+            </div>
+        </div>
+
+        <div class="nftDetails">
+            <div class="detailsLeft">
+                <h2>Propriétaire : JeanMichel</h2>
+                <h2>Création : 18/07/2022</h2>
+                <h2>dernière vente : 09/03/2023</h2>
+            </div>
+            <div class="detailsRight">
+                <h2>Views : 244</h2>
+                <h2>Likes : 172</h2>
+                <h2>Favoris : 103</h2>
+            </div>
+        </div>
+        <div class="nftDescription">
+            <p>Au sein de l'urbanité dynamique, un dragon en proie à une rage insatiable surgit des ombres, ses ailes
+                majestueuses obscurcissant le ciel. Les gratte-ciel, symboles d'ambition humaine, se retrouvent soudain
+                à la merci de sa colère dévorante. Ses yeux incandescents reflètent la lueur des flammes qui jaillissent
+                de sa gueule, et chaque souffle embrasé éclaire la nuit d'une lueur sinistre. Les artères de la ville
+                deviennent des rivières de feu, et les bâtiments jadis imposants se transforment en ruines fumantes.</p>
+        </div>
+    </div>
+
+</app-contain>

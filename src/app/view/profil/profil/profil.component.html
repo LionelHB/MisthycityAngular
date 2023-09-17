@@ -1,1 +1,87 @@
-<p>profil works!</p>
+<app-contain>
+
+    <div class="profilPage">
+        <div class="profilTitle">
+            <h1>Profil de JeanMichel</h1>
+        </div>
+
+        <div class="changeUsername profilPart">
+            <div class="changeUsernameStyle">
+                <h2>JeanMichel</h2>
+                <input type="text" placeholder="Pseudonyme ...">
+            </div>
+
+            <div class="profilButton">
+                <a type="submit" class="animated-button1">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                    Modifier
+                </a>
+            </div>
+        </div>
+
+        <div class="changePassword profilPart">
+            <div class="changePasswordStyle">
+                <h2>Mot de passe</h2>
+                <input type="text" placeholder="Mot de passe ...">
+            </div>
+
+            <div class="profilButton">
+                <a type="submit" class="animated-button1">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                    Modifier
+                </a>
+            </div>
+        </div>
+
+        <div class="changeGallery profilPart">
+            <h2>Galerie : 1 / 3</h2>
+
+            <div class="profilButton">
+                <a [routerLink]="['/profil/mes-galeries']" class="animated-button1">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                    Modifier
+                </a>
+            </div>
+        </div>
+
+        <div class="addAdministerNft profilPart">
+            <h2>Nfts : 5</h2>
+
+            <div class="profilButton nftProfilButton">
+                <a [routerLink]="['/profil/gerer-ajouter-nft']" class="animated-button1">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                    Gérer/Ajouter
+                </a>
+            </div>
+        </div>
+
+        <div class="admisterFavoris profilPart">
+            <h2>Mes favoris : 51</h2>
+
+            <div class="profilButton">
+                <a type="submit" class="animated-button1">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                    Modifier
+                </a>
+            </div>
+        </div>
+
+
+
+    </div>
+</app-contain>

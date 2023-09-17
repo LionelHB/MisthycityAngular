@@ -3,26 +3,52 @@
     <h1>Les galeries du site</h1>
   </div>
 
-  <div class="galleryList">
-    <h2>Les dernières galeries ouvertes :</h2>
-  </div>
 
 
-  <div *ngFor="let gallery of galleries">
-    <div class="row">
-      <div class="col3">
-        <div class="card">
-          <div *ngFor="let gallery of galleries">
-            <h2>{{ gallery.name }}</h2>
-                      </div>
 
-        </div>
+  <div class="row mx-auto bgCards">
+    <div class="galleryList">
+      <h2>Les dernières galeries ouvertes :</h2>
+    </div>
+    <div class="col-4" *ngFor="let gallery of pageData">
+
+      <div class="card myCards mx-auto">
+        <h5>{{ gallery.name }}</h5>
+        <h6>{{ gallery.owner.username }}</h6>
+        <!-- Vérifiez si gallery.nft est défini et s'il contient des éléments -->
+        <ng-container *ngIf="gallery.owner.nft && gallery.owner.nft.length > 0">
+         <a [routerLink]="getGalleryUrl(gallery.name)" class="myImageLink" >
+          <img [src]="gallery.owner.nft[0].nftPath" alt="Image NFT">
+        </a> 
+        </ng-container>
+        <img *ngIf="!gallery.owner.nft || gallery.owner.nft.length === 0" src="../../../assets/design/sansnft.webp" alt="No NFT Image">
       </div>
     </div>
   </div>
 
-  <!-- Contrôles de pagination -->
 
+  <div class="myPagination">
+    <div class="myPaginationButton mx-auto">
+      <a href="javascript:void(0);" (click)="previousPage()" class="animated-button1"
+        [class.disabled]="currentPage === 1">
+        <span></span>
+        <span></span>
+        Précédent
+        <span></span>
+        <span></span>
+      </a>
 
+      <span class="counterPagination">Page {{ currentPage }} de {{ getTotalPages() }}</span>
+
+      <a href="javascript:void(0);" (click)="nextPage()" class="animated-button1"
+        [class.disabled]="currentPage === getTotalPages()">
+        <span></span>
+        <span></span>
+        Suivant
+        <span></span>
+        <span></span>
+      </a>
+    </div>
+  </div>
 
 </app-contain>
