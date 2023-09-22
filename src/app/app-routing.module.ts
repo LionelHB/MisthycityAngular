@@ -22,6 +22,7 @@ import { ProfilGalleryComponent } from './view/profil/profil-gallery/profil-gall
 import { ProfilGalleryNewComponent } from './view/profil/profil-gallery-new/profil-gallery-new.component';
 import { ProfilUserNftComponent } from './view/profil/profil-user-nft/profil-user-nft.component';
 import { ProfilUserNftAdministerComponent } from './view/profil/profil-user-nft-administer/profil-user-nft-administer.component';
+import { ProfilUserNftNewComponent } from './view/profil/profil-user-nft-new/profil-user-nft-new.component';
 
 
 
@@ -40,8 +41,9 @@ const routes: Routes = [
   { path: 'profil', component: ProfilComponent },
   { path: 'profil/mes-galeries', component: ProfilGalleryComponent },
   { path: 'profil/nouvelle-galerie', component: ProfilGalleryNewComponent },
-  { path: 'profil/gerer-ajouter-nft', component: ProfilUserNftComponent },
+  { path: 'profil/mes-nfts', component: ProfilUserNftComponent },
   { path: 'profil/modifier-nft', component: ProfilUserNftAdministerComponent },
+  { path: 'profil/ajouter-nft', component: ProfilUserNftNewComponent },
   { path: 'reseaux-sociaux', component: SocialMediasComponent },
   { path: 'connexion-inscription', component: LoginRegisterComponent },
   { path: 'nft/show/:name', component: NftShowComponent },

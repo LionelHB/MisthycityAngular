@@ -48,6 +48,7 @@ import { GalleryService } from './services/gallery.service';
 import { UserService } from './services/user.service';
 import { PaginationService } from './services/pagination.service';
 import { NftService } from './services/nft.service';
+import { ProfilUserNftNewComponent } from './view/profil/profil-user-nft-new/profil-user-nft-new.component';
 
 
 
@@ -86,7 +87,8 @@ import { NftService } from './services/nft.service';
     ProfilGalleryNewComponent,
     ProfilUserNftComponent,
     ModalConfirmationComponent,
-    ProfilUserNftAdministerComponent
+    ProfilUserNftAdministerComponent,
+    ProfilUserNftNewComponent
   ],
   imports: [
     BrowserAnimationsModule,
