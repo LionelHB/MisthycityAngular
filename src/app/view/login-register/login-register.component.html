@@ -1,26 +1,19 @@
 <app-contain>
     <h2 class="titleLoginRegister titleLogin">Connexion</h2>
     <div class="myFormlogin">
-        <form action="email">
+        <form (ngSubmit)="onLoginSubmit()">
             <div class="myInput inputTop">
-                <input type="text" placeholder="Pseudo ">
+                <input type="text" placeholder="Pseudo" [(ngModel)]="email" name="email">
             </div>
             <div class="myInput inputbottom">
-                <input type="text" placeholder="Mot de passe">
+                <input type="password" placeholder="Mot de passe" [(ngModel)]="password" name="password">
             </div>
 
             <div class="formLoginRegisterButton">
-                <a type="submit" class="animated-button1">
-                    <span></span>
-                    <span></span>
-                    <span></span>
-                    <span></span>
-                    Connexion
-                </a>
+                <button type="submit" class="animated-button1">Connexion</button>
             </div>
         </form>
     </div>
 
-<ns-register-form></ns-register-form>
-
+    <ns-register-form></ns-register-form>
 </app-contain>

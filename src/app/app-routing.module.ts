@@ -23,36 +23,44 @@ import { ProfilGalleryNewComponent } from './view/profil/profil-gallery-new/prof
 import { ProfilUserNftComponent } from './view/profil/profil-user-nft/profil-user-nft.component';
 import { ProfilUserNftAdministerComponent } from './view/profil/profil-user-nft-administer/profil-user-nft-administer.component';
 import { ProfilUserNftNewComponent } from './view/profil/profil-user-nft-new/profil-user-nft-new.component';
+import { CanLoadAuthGuard } from './guard/can-load.guard';
 
 
 
 const routes: Routes = [  
   { path: '', redirectTo: 'home', pathMatch: 'full' },
-  { path: 'home', component: HomeComponent, canActivate: [authentificationGuard]},
-
+  { path: 'home', component: HomeComponent },
   { path: 'histoire', component: LoreComponent },
   { path: 'nft-explication', component: NftExplicationComponent },
   { path: 'qui-suis-je', component: AboutUsComponent },
   { path: 'categories', component: CategoryComponent },
   { path: 'creatures', component: SubCategoryComponent },
-  { path: 'creature/show/:name', component: SubCategoryShowComponent },
   { path: 'galeries', component: GalleryComponent },
   { path: 'partenaires', component: PartnairComponent },
-  { path: 'profil', component: ProfilComponent },
-  { path: 'profil/mes-galeries', component: ProfilGalleryComponent },
-  { path: 'profil/nouvelle-galerie', component: ProfilGalleryNewComponent },
-  { path: 'profil/mes-nfts', component: ProfilUserNftComponent },
-  { path: 'profil/modifier-nft', component: ProfilUserNftAdministerComponent },
-  { path: 'profil/ajouter-nft', component: ProfilUserNftNewComponent },
   { path: 'reseaux-sociaux', component: SocialMediasComponent },
   { path: 'connexion-inscription', component: LoginRegisterComponent },
-  { path: 'nft/show/:name', component: NftShowComponent },
-  { path: 'galerie/show/:name', component: GalleryShowComponent },
-
-
+  { path: 'not-found', component: NotfoundComponent },
+  { path: '**', redirectTo: 'connexion-inscription' },
+  {
+    path: 'restricted',
+    canLoad: [CanLoadAuthGuard], // Utilisez le guard CanLoadAuthGuard
+    canActivateChild: [authentificationGuard],
+    children: [
+      { path: 'creature/show/:name', component: SubCategoryShowComponent },
+      { path: 'profil', component: ProfilComponent },
+      { path: 'profil/mes-galeries', component: ProfilGalleryComponent },
+      { path: 'profil/nouvelle-galerie', component: ProfilGalleryNewComponent },
+      { path: 'profil/mes-nfts', component: ProfilUserNftComponent },
+      { path: 'profil/modifier-nft', component: ProfilUserNftAdministerComponent },
+      { path: 'profil/ajouter-nft', component: ProfilUserNftNewComponent },
+      { path: 'nft/show/:name', component: NftShowComponent },
+      { path: 'galerie/show/:name', component: GalleryShowComponent },
+    ],
+  },
   { path: 'not-found', component: NotfoundComponent },
   { path: '**', redirectTo: 'not-found' },
 ];
+
 
 @NgModule({
   imports: [RouterModule.forRoot(routes)],

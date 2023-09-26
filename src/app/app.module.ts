@@ -6,6 +6,7 @@ import { AppRoutingModule } from './app-routing.module';
 import { HttpClientModule } from '@angular/common/http';
 import { MatDialogModule } from '@angular/material/dialog';
 
+
 import { AppComponent } from './app.component';
 
 import { HeaderComponent } from './shared/header/header.component'; 
@@ -49,9 +50,11 @@ import { UserService } from './services/user.service';
 import { PaginationService } from './services/pagination.service';
 import { NftService } from './services/nft.service';
 import { ProfilUserNftNewComponent } from './view/profil/profil-user-nft-new/profil-user-nft-new.component';
+import { CanLoadAuthGuard } from './guard/can-load.guard';
 
 
 
+import { JwtModule } from '@auth0/angular-jwt';
 
 
 
@@ -90,17 +93,30 @@ import { ProfilUserNftNewComponent } from './view/profil/profil-user-nft-new/pro
     ProfilUserNftAdministerComponent,
     ProfilUserNftNewComponent
   ],
+  
   imports: [
+    
+    JwtModule.forRoot({
+      config: {
+        tokenGetter: tokenGetter,
+        allowedDomains: ['localhost:8000'], 
+        disallowedRoutes: ['/api/login_check'], // Utilisez la route sans le préfixe du domaine
+      },
+    }),
     BrowserAnimationsModule,
     BrowserModule,
     AppRoutingModule,
     FormsModule,
     HttpClientModule,
-    MatDialogModule
-   
+    MatDialogModule,
   ],
-  providers: [CategoryService, SubCategoryService, GalleryService, UserService, PaginationService, NftService],
+
+  providers: [CategoryService, SubCategoryService, GalleryService, UserService, PaginationService, NftService, CanLoadAuthGuard ],
   bootstrap: [AppComponent], 
   
 })
+
 export class AppModule { }
+export function tokenGetter() {
+  return localStorage.getItem('jwt_token'); // Assurez-vous que 'jwt_token' correspond à la clé sous laquelle vous stockez votre token JWT.
+}

@@ -30,7 +30,7 @@
     </div>
 
 
-    <div class="myUserList">
+    <div *ngIf="!authService.isAuthenticated()" class="myUserList">
         <ul>
             <li>
                 <a routerLink="/admin" routerLinkActive="active-link">Admin</a>
