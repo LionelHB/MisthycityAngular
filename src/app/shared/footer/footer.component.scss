@@ -1,6 +1,7 @@
 .myFooter {
     position: absolute;
     bottom: 0.5rem;
+    color: #A3A3A3;
 
     ul {
         padding: 0;
@@ -11,7 +12,7 @@
             font-family: merrycle2;
             list-style: none;
             color: #A3A3A3;
-         
+
 
             a {
                 color: #A3A3A3;
@@ -21,14 +22,24 @@
                 &:hover {
                     border-radius: 15px;
                     border-top: 1px solid white;
-                    border-bottom: 1px solid white; 
-                    border-left: none; 
+                    border-bottom: 1px solid white;
+                    border-left: none;
                     color: white;
                 }
             }
+
             .active-link {
-                color: rgb(255, 255, 255); 
-              }
+                color: rgb(255, 255, 255);
+            }
+        }
+    }
+
+    .footerBottom {
+
+        a,
+        p {
+            font-weight: 200;
+            font-size: 0.8rem;
         }
     }
 }

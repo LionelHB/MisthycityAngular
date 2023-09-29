@@ -55,6 +55,7 @@ import { CanLoadAuthGuard } from './guard/can-load.guard';
 
 
 import { JwtModule } from '@auth0/angular-jwt';
+import { LegalInformationsComponent } from './view/legalInformations/legal-informations/legal-informations.component';
 
 
 
@@ -91,7 +92,8 @@ import { JwtModule } from '@auth0/angular-jwt';
     ProfilUserNftComponent,
     ModalConfirmationComponent,
     ProfilUserNftAdministerComponent,
-    ProfilUserNftNewComponent
+    ProfilUserNftNewComponent,
+    LegalInformationsComponent
   ],
   
   imports: [

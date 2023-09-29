@@ -1,4 +1,3 @@
-// accordion.component.ts
 import { Component, Input } from '@angular/core';
 import { CategoryModel } from 'src/app/modele/category/category.component';
 import { slideInOut } from '../../animation/collapse.animation'; 
