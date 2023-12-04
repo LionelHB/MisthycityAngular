@@ -5,6 +5,7 @@ import { GalleryService } from 'src/app/services/gallery.service';
 import { NftService } from 'src/app/services/nft.service';
 import { PaginationService } from 'src/app/services/pagination.service';
 
+
 @Component({
   selector: 'app-gallery',
   templateUrl: './gallery.component.html',
@@ -16,7 +17,6 @@ export class GalleryComponent implements OnInit {
   currentPage = 1;
   pageData: GalleryModel[] = [];
   nftsByOwner: { [userId: number]: NftModel[] | undefined } = {};
-
 
   constructor(
     private galleryService: GalleryService,
@@ -37,10 +37,15 @@ export class GalleryComponent implements OnInit {
             }
             const nfts = this.nftsByOwner[userId];
             if (nfts && nfts.length > 0) {
+              // ...
             }
           }
         }
 
+        // Filtrer les galeries sans NFT
+        this.galleries = this.galleries.filter(gallery => {
+          return gallery.owner.nft && gallery.owner.nft.length > 0;
+        });
 
         this.galleries.sort((a, b) => {
           const dateA = new Date(a.creationDate);
@@ -55,6 +60,56 @@ export class GalleryComponent implements OnInit {
       console.error('Error loading galleries:', error);
     }
   }
+// @Component({
+//   selector: 'app-gallery',
+//   templateUrl: './gallery.component.html',
+//   styleUrls: ['./gallery.component.scss']
+// })
+// export class GalleryComponent implements OnInit {
+//   galleries: GalleryModel[] | undefined;
+//   pageSize = 6;
+//   currentPage = 1;
+//   pageData: GalleryModel[] = [];
+//   nftsByOwner: { [userId: number]: NftModel[] | undefined } = {};
+
+
+//   constructor(
+//     private galleryService: GalleryService,
+//     private paginationService: PaginationService,
+//     private nftService: NftService
+//   ) { }
+
+//   async ngOnInit(): Promise<void> {
+//     try {
+//       this.galleries = await this.galleryService.getGalleries().toPromise();
+
+//       if (this.galleries) {
+//         for (const gallery of this.galleries) {
+//           const userId = gallery.owner?.id;
+//           if (userId) {
+//             if (!this.nftsByOwner[userId]) {
+//               this.nftsByOwner[userId] = await this.nftService.getNftsByUserId(userId).toPromise();
+//             }
+//             const nfts = this.nftsByOwner[userId];
+//             if (nfts && nfts.length > 0) {
+//             }
+//           }
+//         }
+
+
+//         this.galleries.sort((a, b) => {
+//           const dateA = new Date(a.creationDate);
+//           const dateB = new Date(b.creationDate);
+//           return dateB.getTime() - dateA.getTime();
+//         });
+//         console.log('Galleries:', this.galleries);
+//       }
+
+//       this.updatePageData();
+//     } catch (error) {
+//       console.error('Error loading galleries:', error);
+//     }
+//   }
 
 
   updatePageData() {
