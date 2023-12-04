@@ -15,9 +15,8 @@
       <div class="card myCards mx-auto">
         <h5>{{ gallery.name }}</h5>
         <h6>{{ gallery.owner.username }}</h6>
-        <!-- Vérifiez si gallery.nft est défini et s'il contient des éléments -->
         <ng-container *ngIf="gallery.owner.nft && gallery.owner.nft.length > 0">
-         <a [routerLink]="getGalleryUrl(gallery.name)" class="myImageLink" >
+        <a [routerLink]="getGalleryUrl(gallery.name)" class="myImageLink" >
           <img [src]="gallery.owner.nft[0].nftPath" alt="Image NFT">
         </a> 
         </ng-container>

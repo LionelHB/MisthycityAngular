@@ -15,6 +15,7 @@ import { SocialMediasComponent } from './view/social-medias/social-medias.compon
 import { LoginRegisterComponent } from './view/login-register/login-register.component';
 
 import { authentificationGuard } from './guard/authentification.guard';
+
 import { SubCategoryShowComponent } from './view/sub-category/sub-category-show/sub-category-show.component';
 import { NftShowComponent } from './view/nft-show/nft-show.component';
 import { GalleryShowComponent } from './view/gallery/galleryShow/gallery-show/gallery-show.component';

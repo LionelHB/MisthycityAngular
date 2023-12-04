@@ -10,7 +10,6 @@ export const fadeInOut = trigger('fadeInOut', [
   ]),
 ]);
 
-
 export const slideInOut = trigger('slideInOut', [
   transition(':enter', [
     style({ transform: 'translateY(-40%)' }), 
