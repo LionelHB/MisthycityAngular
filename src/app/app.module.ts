@@ -50,7 +50,7 @@ import { UserService } from './services/user.service';
 import { PaginationService } from './services/pagination.service';
 import { NftService } from './services/nft.service';
 import { ProfilUserNftNewComponent } from './view/profil/profil-user-nft-new/profil-user-nft-new.component';
-import { CanLoadAuthGuard } from './guard/can-load.guard';
+// import { CanLoadAuthGuard } from './guard/can-load.guard';
 
 
 
@@ -113,7 +113,7 @@ import { LegalInformationsComponent } from './view/legalInformations/legal-infor
     MatDialogModule,
   ],
 
-  providers: [CategoryService, SubCategoryService, GalleryService, UserService, PaginationService, NftService, CanLoadAuthGuard ],
+  providers: [CategoryService, SubCategoryService, GalleryService, UserService, PaginationService, NftService,  ],
   bootstrap: [AppComponent], 
   
 })
